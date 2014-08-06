@@ -1,13 +1,12 @@
 <h1>Users</h1>
-
-<% @users.each do |u| %>
 <ul>
+<% @users.each do |u| %>
 	<li>
-		User: <%= u.name %>  
+		User: <%= link_to u.name %>  
 	</li>
 	<li>
-		From: <%= u.location %>
+		From: <%= link_to u.location %>
+		<%= button_to "X", user_path(u.id), method: :delete %>
 	</li>
-</ul>
-
 <% end %>
+</ul>

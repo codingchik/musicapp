@@ -1,0 +1,11 @@
+<h1>Likes</h1>
+<ul>
+<% @likes.each do |l| %>
+	<li>
+		User: <%= link_to l.text %>  
+	</li>
+	<li>
+		<%= button_to "X", user_path(u.id), method: :delete %>
+	</li>
+<% end %>
+</ul>

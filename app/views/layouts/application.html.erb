@@ -10,5 +10,16 @@
 
 <%= yield %>
 
+<% if current_user %>
+Welcome <%= current_user.name %>
+<%= link_to "Logout", session_path, method: :delete %>
+<% else %>
+<%= link_to "Signup", new_user_path if !@is_signup%>
+
+<%= link_to "Login", new_session_path if !@is_login%>
+
+
+<% end %>
+
 </body>
 </html>
