@@ -1,0 +1,13 @@
+<h1>Users</h1>
+
+<% @users.each do |u| %>
+<ul>
+	<li>
+		User: <%= u.name %>  
+	</li>
+	<li>
+		From: <%= u.location %>
+	</li>
+</ul>
+
+<% end %>
